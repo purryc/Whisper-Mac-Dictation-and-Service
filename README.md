@@ -29,6 +29,15 @@ Current stable release: `v0.2.0`
 3. Open `WhisperCppRealtimeMacApp.app`.
 4. Pick `Chinese + English` for Chinese-first mixed dictation.
 
+## Model Profiles
+
+- `WhisperCPP_install_runtime.command`: installs the balanced `ggml-small.bin` profile
+- `WhisperCPP_install_accurate_runtime.command`: installs the more accurate `ggml-medium.bin` profile
+- `WhisperCPP_use_balanced_model.command`: switches the gateway back to the small model
+- `WhisperCPP_use_accurate_model.command`: switches the gateway to the medium model
+
+If Chinese dictation is still too unstable for short phrases, use the accurate model and restart the gateway.
+
 This project is built around a simple boundary: every app talks to one local service instead of embedding whisper.cpp integration details separately.
 
 Formal release notes live at [RELEASE.md](/Users/hmi/Documents/my%20skills/whispercpp-realtime-asr/RELEASE.md) and [docs/releases/v0.2.0.md](/Users/hmi/Documents/my%20skills/whispercpp-realtime-asr/docs/releases/v0.2.0.md), and the running change history lives at [CHANGELOG.md](/Users/hmi/Documents/my%20skills/whispercpp-realtime-asr/CHANGELOG.md).
