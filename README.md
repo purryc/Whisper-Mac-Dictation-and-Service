@@ -4,7 +4,7 @@ Local WhisperCPP dictation for macOS, plus a reusable local ASR service for othe
 
 Current stable release: `v0.2.0`
 
-![Whisper Mac Dictation and Service UI preview](docs/assets/whispercpp-local-ui-hero.png)
+![Whisper Mac Dictation and Service live demo](docs/assets/whispercpp-macos-live-demo.gif)
 
 ## Highlights
 
