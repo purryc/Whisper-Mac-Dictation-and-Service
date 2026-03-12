@@ -111,6 +111,10 @@ final class ASRAppModel: ObservableObject {
         recognitionMode.helperText
     }
 
+    var recognitionModeTitle: String {
+        recognitionMode.title
+    }
+
     func startASR() {
         guard !isLive else {
             return
@@ -197,7 +201,7 @@ final class ASRAppModel: ObservableObject {
         switch event.type {
         case "session_started":
             runState = .live
-            statusDetail = "Listening through the local gateway."
+            statusDetail = "Listening through the local gateway in \(recognitionMode.title) mode."
         case "partial":
             partialTranscript = event.text?.isEmpty == false ? (event.text ?? "") : "Listening..."
         case "session_final":

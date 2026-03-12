@@ -36,6 +36,7 @@ struct CaptionOverlayView: View {
 
                 HStack(spacing: 12) {
                     Text("Top Pinned")
+                    Text("Mode \(model.recognitionModeTitle)")
                     Text("Opacity \(Int(model.overlayOpacity * 100))%")
                     if model.autoCopyFinalText {
                         Text("Auto Copy On")
