@@ -12,7 +12,7 @@ Reusable local ASR gateway for `whisper.cpp` with:
 
 This package is aimed at the reuse boundary you asked for: every application talks to one local service instead of embedding whisper.cpp integration details separately.
 
-Formal release notes live at [docs/releases/v0.2.0.md](/Users/hmi/Documents/my%20skills/whispercpp-realtime-asr/docs/releases/v0.2.0.md), and the running change history lives at [CHANGELOG.md](/Users/hmi/Documents/my%20skills/whispercpp-realtime-asr/CHANGELOG.md).
+Formal release notes live at [RELEASE.md](/Users/hmi/Documents/my%20skills/whispercpp-realtime-asr/RELEASE.md) and [docs/releases/v0.2.0.md](/Users/hmi/Documents/my%20skills/whispercpp-realtime-asr/docs/releases/v0.2.0.md), and the running change history lives at [CHANGELOG.md](/Users/hmi/Documents/my%20skills/whispercpp-realtime-asr/CHANGELOG.md).
 
 ## Why this shape
 
