@@ -118,6 +118,7 @@ final class ASRAppModel: ObservableObject {
 
         runState = .starting
         statusDetail = "Connecting to \(gatewayBaseURL)..."
+        finalTranscript = ""
         partialTranscript = "Waiting for speech..."
 
         let client = GatewayWebSocketClient()
@@ -240,6 +241,7 @@ final class ASRAppModel: ObservableObject {
         } else if runState != .error {
             runState = .idle
             statusDetail = "Gateway disconnected."
+            partialTranscript = "Waiting for speech..."
         }
 
         teardownConnection()
@@ -249,6 +251,7 @@ final class ASRAppModel: ObservableObject {
         audioCapture.stop()
         runState = .error
         statusDetail = error.localizedDescription
+        partialTranscript = "Waiting for speech..."
         teardownConnection()
     }
 

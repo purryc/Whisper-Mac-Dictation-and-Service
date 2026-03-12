@@ -78,11 +78,13 @@ class RealtimeSession:
             live = await self._transcribe_bytes(bytes(self.active_buffer), duration_ms=live_duration_ms)
             live_text = live.text
 
-        combined_text = self._join_texts(*self._committed_texts, live_text)
-        if combined_text and combined_text != self._last_partial_text:
-            self._last_partial_text = combined_text
+        # Keep live partials scoped to the current in-flight utterance.
+        # The committed utterances are reserved for the final transcript so the
+        # overlay does not look "polluted" by earlier phrases in the session.
+        if live_text != self._last_partial_text:
+            self._last_partial_text = live_text
             return EngineTranscript(
-                text=combined_text,
+                text=live_text,
                 language=self.language or self.settings.default_language,
                 duration_ms=self._total_duration_ms(),
                 engine="whisper-cli",
