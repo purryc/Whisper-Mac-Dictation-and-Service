@@ -1,16 +1,33 @@
-# Whisper.cpp Realtime ASR Gateway
+# Whisper Mac Dictation and Service
 
-Formal release: `v0.2.0`
+Local WhisperCPP dictation for macOS, plus a reusable local ASR service for other apps on the same machine.
 
-Reusable local ASR gateway for `whisper.cpp` with:
+Current stable release: `v0.2.0`
 
-- `HTTP` file transcription for any app
-- `WebSocket` realtime sessions with partial updates
-- a Mac-friendly local UI for microphone streaming and live captions
-- a native macOS SwiftUI companion app with a menu bar control surface
-- a swappable engine adapter so the public API stays stable
+## Highlights
 
-This package is aimed at the reuse boundary you asked for: every application talks to one local service instead of embedding whisper.cpp integration details separately.
+- Native macOS menu bar app with floating live captions
+- One local gateway at `http://127.0.0.1:8765` for reuse across Mac apps
+- `HTTP` file transcription and `WebSocket` realtime streaming
+- Python SDK and JavaScript SDK for other projects
+- Dedicated `start` and `stop` launchers for the local gateway
+- Mixed Chinese and English support with explicit recognition modes
+
+## Best For
+
+- Personal Mac dictation
+- Internal tools that need local speech-to-text
+- Reusing one local ASR service across multiple desktop or browser apps
+- Chinese-first mixed speech with English terms
+
+## Fast Start
+
+1. Run `WhisperCPP_install_runtime.command` once.
+2. Run `WhisperCPP_start_gateway.command`.
+3. Open `WhisperCppRealtimeMacApp.app`.
+4. Pick `Chinese + English` for Chinese-first mixed dictation.
+
+This project is built around a simple boundary: every app talks to one local service instead of embedding whisper.cpp integration details separately.
 
 Formal release notes live at [RELEASE.md](/Users/hmi/Documents/my%20skills/whispercpp-realtime-asr/RELEASE.md) and [docs/releases/v0.2.0.md](/Users/hmi/Documents/my%20skills/whispercpp-realtime-asr/docs/releases/v0.2.0.md), and the running change history lives at [CHANGELOG.md](/Users/hmi/Documents/my%20skills/whispercpp-realtime-asr/CHANGELOG.md).
 
