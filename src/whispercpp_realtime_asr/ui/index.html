@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Whisper.cpp Realtime ASR</title>
+    <link rel="stylesheet" href="/ui/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="panel hero">
+        <div>
+          <p class="eyebrow">Local Mac UI</p>
+          <h1>Realtime ASR Console</h1>
+          <p class="lede">
+            Start the microphone, speak naturally, and watch the transcript update in place.
+          </p>
+        </div>
+        <div class="hero-actions">
+          <button id="startButton" class="primary">Start ASR</button>
+          <button id="stopButton" class="secondary" disabled>Stop</button>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="panel status-card">
+          <p class="label">Status</p>
+          <p id="statusText" class="status idle">Idle</p>
+          <p id="detailText" class="detail">Microphone not started yet.</p>
+        </article>
+
+        <article class="panel transcript-card">
+          <div class="card-head">
+            <p class="label">Live Transcript</p>
+            <button id="clearButton" class="ghost">Clear</button>
+          </div>
+          <div id="finalTranscript" class="transcript final"></div>
+          <div id="partialTranscript" class="transcript partial">Waiting for speech...</div>
+        </article>
+      </section>
+    </main>
+
+    <script type="module" src="/ui/app.js"></script>
+  </body>
+  </html>

@@ -1,0 +1,14 @@
+.DS_Store
+.codex/
+.venv/
+.gateway-runtime/
+.whisper-runtime/
+WhisperCPP_gateway.env
+clients/js/node_modules/
+clients/js/dist/
+macos-app/.build/
+macos-app/dist/
+**/__pycache__/
+*.pyc
+*.pyo
+src/*.egg-info/
